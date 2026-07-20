@@ -1,0 +1,14 @@
+using System;
+
+Console.WriteLine();
+Console.Write("Enter your name: ");
+string? name = Console.ReadLine();
+
+if (name is not null)
+{
+    Console.WriteLine($"Hello, {name}!");
+}
+else
+{
+    Console.WriteLine("No name was entered.");
+}
