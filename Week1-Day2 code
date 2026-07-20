@@ -1,1 +1,21 @@
+using System;
+
+int age = 22;
+double height = 1.76;
+bool isStudent = true;
+
+
+string name = "Mohammad";
+int []numbers = { 1, 2, 3, 4, 5 };
+List<string> fruits = new List<string> { "Apple", "Banana", "Cherry" };
+
+Console.WriteLine($"age type: {age.GetType()}");
+Console.WriteLine($"height type: {height.GetType()}");
+Console.WriteLine($"isStudent type: {isStudent.GetType()}");
+
+Console.WriteLine();
+
+Console.WriteLine($"name type: {name.GetType()}");
+Console.WriteLine($"numbers type: {numbers.GetType()}");
+Console.WriteLine($"fruits type: {fruits.GetType()}");
 
