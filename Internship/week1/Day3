@@ -1,1 +1,21 @@
+using System;
+using System.Collections.Generic;
+
+Console.WriteLine("Hello");
+public class Book
+{
+    public string? title;
+    public string? author;
+    public int year;
+
+    
+}
+
+public class Library
+{
+    public string? LibraryName;
+    public List<Book> books = new List<Book>();
+
+}
+
 
