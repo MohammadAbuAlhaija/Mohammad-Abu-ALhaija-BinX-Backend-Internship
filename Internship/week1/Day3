@@ -1,18 +1,18 @@
 using System;
 using System.Collections.Generic;
 
-BookDto book = new BookDto("Clean Code", "Robert C. Martin", 2008);
+BookDto book = new BookDto("imposible", "mohammad", 2008);
 
 Console.WriteLine(book.Title);
 
 
-Book book1 = new Book("Clean Code", "Robert C. Martin", 2008);
+Book book1 = new Book("imposible", "mohammad", 2008);
 
 Console.WriteLine(book1.Title);
 Console.WriteLine(book1.Author);
 Console.WriteLine(book1.Year);
 
-Book book2 = new Book("Clean Code", "Robert C. Martin", 2008);
+Book book2 = new Book("imposible", "mohammad", 2008);
 
 book2.Title = "C# Programming";
 book2.Year = 2025;
