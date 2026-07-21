@@ -1,7 +1,11 @@
 using System;
 using System.Collections.Generic;
 
-Console.WriteLine("Hello");
+BookDto book = new BookDto("Clean Code", "Robert C. Martin", 2008);
+
+Console.WriteLine(book.Title);
+
+public record BookDto(string Title, string Author, int Year);
 public class Book
 {
     public string? title;
@@ -10,12 +14,20 @@ public class Book
 
     
 }
-
 public class Library
 {
     public string? LibraryName;
     public List<Book> books = new List<Book>();
 
+   public void AddBook(Book book)
+    {
+        books.Add(book);
+    }
+
+    public void removeBook(Book book)
+    {
+        books.Remove(book);
+    }
 }
 
 
