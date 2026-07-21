@@ -21,6 +21,38 @@ Console.WriteLine(book2.Title);
 Console.WriteLine(book2.Author);
 Console.WriteLine(book2.Year);
 
+void PrintItem(IPrintable item)
+{
+    item.Print();
+}
+
+BookReport report = new BookReport();
+LibraryCard card = new LibraryCard();
+
+PrintItem(report);
+PrintItem(card);
+
+public interface IPrintable
+{
+    void Print();
+}
+
+public class BookReport : IPrintable
+{
+    public void Print()
+    {
+        Console.WriteLine("Printing Book Report...");
+    }
+}
+
+public class LibraryCard : IPrintable
+{
+    public void Print()
+    {
+        Console.WriteLine("Printing Library Card...");
+    }
+}
+
 public record BookDto(string Title, string Author, int Year);
 public class Book
 {
