@@ -5,14 +5,53 @@ BookDto book = new BookDto("Clean Code", "Robert C. Martin", 2008);
 
 Console.WriteLine(book.Title);
 
+
+Book book1 = new Book("Clean Code", "Robert C. Martin", 2008);
+
+Console.WriteLine(book1.Title);
+Console.WriteLine(book1.Author);
+Console.WriteLine(book1.Year);
+
+Book book2 = new Book("Clean Code", "Robert C. Martin", 2008);
+
+book2.Title = "C# Programming";
+book2.Year = 2025;
+
+Console.WriteLine(book2.Title);
+Console.WriteLine(book2.Author);
+Console.WriteLine(book2.Year);
+
 public record BookDto(string Title, string Author, int Year);
 public class Book
 {
-    public string? title;
-    public string? author;
-    public int year;
+    private string? title;
+    private string? author;
+    private int year;
 
-    
+    public string? Title
+    {
+        get { return title; }
+        set { title = value; }
+    }
+
+    public string? Author
+    {
+        get { return author; }
+        set { author = value; }
+    }
+
+    public int Year
+    {
+        get { return year; }
+        set { year = value; }
+    }
+
+    public Book(string title, string author, int year)
+    {
+        Title = title;
+        Author = author;
+        Year = year;
+    }
 }
 public class Library
 {
