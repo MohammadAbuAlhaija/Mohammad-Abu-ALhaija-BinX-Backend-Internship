@@ -1,1 +1,33 @@
+using System;
+
+List<Student> students = new()
+{
+    new Student("Mohammad", 95, "CSE"),
+    new Student("Ahmad", 88, "CSE"),
+    new Student("Omar", 72, "CS"),
+    new Student("Yousef", 81, "IT"),
+    new Student("Mahmoud", 67, "CSE"),
+    new Student("Khaled", 90, "CSE"),
+    new Student("Ali", 76, "IT"),
+    new Student("Hamza", 84, "CS")
+};
+
+foreach (Student student in students)
+{
+    Console.WriteLine($"{student.Name} - {student.Grade} - {student.Major}");
+}
+
+public class Student
+{
+    public string Name{ get; set; }
+    public double Grade{ get; set; }
+    public string Major{ get; set; }
+
+    public Student(string name, double grade, string major)
+    {
+        Name = name;
+        Grade = grade;
+        Major = major;
+    }
+}
 
