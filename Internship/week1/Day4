@@ -44,6 +44,18 @@ string message = await LoadMessageAsync();
 
 Console.WriteLine(message);
 
+//4.
+try
+{
+    Console.Write("Enter your age: ");
+    int age = int.Parse(Console.ReadLine()!);
+
+    Console.WriteLine($"Your age is {age}");
+}
+catch (FormatException)
+{
+    Console.WriteLine("Invalid input! Please enter a valid number.");
+}
 
 ////////top level Statements///////
 
